@@ -15,6 +15,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"babylonjs": "^6.10.0"
+		"babylonjs": "^6.10.0",
+		"babylonjs-gui": "^6.10.0"
 	}
 }

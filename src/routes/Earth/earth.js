@@ -11,8 +11,13 @@ export const createScene = (canvas) => {
   // Color to be used when clearing the scene
   scene.clearColor = new BABYLON.Color4(0.9, 0.3, 0.3, 1);
 
+  // Importing Models
+  BABYLON.SceneLoader.ImportMeshAsync('Earth', '../../models/Earth.blend')
+
   // New ArcRotateCamera, Mouse Controllable
   const camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 50, new BABYLON.Vector3(50, 20, 50), scene);
+  // Set Camera Target to the planet
+  camera.setTarget(earthSphere);
   // Increase Camera Speed
   camera.inputs.attached.pointers.panningSensibility = 100;
   // Only get inputs from the <canvas> element, allowing the user to only rotate the camera when <canvas> is clicked/in focus
@@ -27,32 +32,6 @@ export const createScene = (canvas) => {
   const material = new BABYLON.StandardMaterial("material", scene);
   // Setting Material Color
   material.emissiveColor = new BABYLON.Color3(0.3, 0.3, 0.3);
-
-  // Creating an array of Objects to create
-  const sphereNameArray = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
-  const sphereSizeArray = [1, 1.5, 1.5, 1, 5, 4.5, 3, 3];
-
-  // Creating an array of Objects
-  let sphereObjectArray = [];
-
-  // Temporary Variables
-  let sphereObj;
-  let currentPos = 10;
-  const planetSpacing = 10;
-  let size;
-
-  // Loop for creating new objects
-  for (let [index, sphereName] of sphereNameArray.entries()) {
-    size = sphereSizeArray[index];
-    console.log(size, sphereName);
-    sphereObj = new BABYLON.MeshBuilder.CreateSphere(sphereName, {diameter: size}, scene);
-    sphereObj.material = material;
-    sphereObj.position.x = currentPos += planetSpacing;
-    sphereObjectArray.push(sphereObj);
-    currentPos += planetSpacing;
-  }
-
-  // Importing Models
 
 
   // GUI
