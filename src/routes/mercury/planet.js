@@ -76,7 +76,7 @@ export const createScene = (canvas) => {
     button1.top = '-200px';
     button1.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
     button1.onPointerClickObservable.add(function() {
-      location.assign('../');
+      location.assign('/Solar-Factuary/');
     });
 
     advancedTexture.addControl(titleBox);
