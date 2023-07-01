@@ -19,7 +19,7 @@ export const createScene = (canvas) => {
   // Materials
   const planetMaterial = new BABYLON.StandardMaterial('planetMat', scene);
 
-  planetMaterial.emissiveTexture = new BABYLON.Texture('./textures/2k_earth.jpg', scene);
+  planetMaterial.emissiveTexture = new BABYLON.Texture('./textures/2k_sun.jpg', scene);
 
   planetSphere.material = planetMaterial;
 
@@ -58,7 +58,7 @@ export const createScene = (canvas) => {
     titleBox.color = 'white';
     titleBox.fontSize = '50px';
 
-    let subTitleBox = new GUI.TextBlock('SubTitleBox', 'Earth');
+    let subTitleBox = new GUI.TextBlock('SubTitleBox', 'The Sun');
     subTitleBox.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
     subTitleBox.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_TOP;
     subTitleBox.width = '400px';
@@ -95,7 +95,7 @@ export const createScene = (canvas) => {
     titleBox.color = 'white';
     titleBox.fontSize = '30px';
 
-    let fact1 = new GUI.TextBlock('Fact1', "1. Earth's magnetic pole is creeping westward. Until the early 1990s, the magnetic North Pole was known to lie about 1600 km south of true north, in Canada. Yet scientists realised that the location of magnetic north wasn't fixed and was drifting at a rate of 15 km a year and has been increasing since 1990.");
+    let fact1 = new GUI.TextBlock('Fact1', "1. The Sun will continue to burn for about 130 million years after it burns through all of its hydrogen, instead of burning helium. During this time it will expand to such a size that it will engulf Mercury, Venus, and Earth. When it reaches this point, it will have become a red giant star.");
     fact1.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
     fact1.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_TOP;
     fact1.width = '500px';
@@ -107,7 +107,7 @@ export const createScene = (canvas) => {
     fact1.fontSize = '15px';
     fact1.textWrapping = true;
 
-    let fact2 = new GUI.TextBlock('Fact2', "2. The Moon is gradually drifting away from Earth at a rate of approximately 4 cm per year. This phenomenon is caused by the Moon pulling on Earth's oceans creating tidal forces that produce a bulge of water on the side of Earth facing the Moon.");
+    let fact2 = new GUI.TextBlock('Fact2', "2. The Sun's magnetic field is constantly accelerating charged particles called the solar wind. But during solar flares, a large number of charged particles can be emitted. Sometimes a large piece of plasma can even break away from our star. This phenomenon is called coronary ejection.");
     fact2.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
     fact2.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_TOP;
     fact2.width = '500px';
@@ -119,7 +119,7 @@ export const createScene = (canvas) => {
     fact2.fontSize = '15px';
     fact2.textWrapping = true;
 
-    let fact3 = new GUI.TextBlock('Fact3', "3. The length of Earth's day is increasing by about 1.7 milliseconds every century because the moon is slowing down Earth's rotation through the tides that it helps create.");
+    let fact3 = new GUI.TextBlock('Fact3', "3. The layer of the Sun's surface that emits visible light is called the photosphere. There are colder areas that seem dark. You can't just look at our luminary through a telescope, but if you use dark filters, large groups of spots are visible. These are called sunspots which are areas on the surface of the Sun where the lines of force of its magnetic field are twisted and torn.");
     fact3.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
     fact3.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_TOP;
     fact3.width = '500px';
