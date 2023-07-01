@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { createScene } from "./jupiter";
+  import { createScene } from "./planet";
   let el;
   onMount(() => {
     createScene(el)
