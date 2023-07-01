@@ -19,7 +19,7 @@ export const createScene = (canvas) => {
   // Materials
   const planetMaterial = new BABYLON.StandardMaterial('planetMat', scene);
 
-  planetMaterial.emissiveTexture = new BABYLON.Texture('../../textures/2k_jupiter.jpg', scene);
+  planetMaterial.emissiveTexture = new BABYLON.Texture('./textures/2k_jupiter.jpg', scene);
 
   planetSphere.material = planetMaterial;
 
@@ -39,7 +39,7 @@ export const createScene = (canvas) => {
   let skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:10000}, scene);
 	let skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
 	skyboxMaterial.backFaceCulling = false;
-	skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("../../textures/skybox/", scene, extensions);
+	skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("./textures/skybox/", scene, extensions);
 	skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
 	skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
 	skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
