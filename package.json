@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"gh-pages": "npm run build && npx gh-pages -d build"
+		"gh-pages": "node ./gh-pages.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"babylonjs": "^6.10.0",
-		"babylonjs-gui": "^6.10.0"
+		"babylonjs-gui": "^6.10.0",
+		"svelte-preprocess": "^5.0.4"
 	}
 }
